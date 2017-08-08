@@ -1,7 +1,9 @@
 'use strict'
+const fs = require('fs')
 const glob = require('glob')
 const NodeVersionAssets = require('node-version-assets')
 const precache = require('sw-precache')
+const uglifyjs = require('uglify-js')
 
 function pwaPrepare (argv) {
 	const output = argv[0] || 'dist'
@@ -22,6 +24,9 @@ function pwaPrepare (argv) {
 					`${output}/**/*.{js,html,css,png,jpg,gif,svg,eot,ttf,woff,txt,webapp,json}`
 				],
 				stripPrefix: output
+			}, () => {
+				const file = uglifyjs.minify(`${output}/service-worker.js`).code
+				fs.writeFileSync(`${output}/service-worker.js`, file)
 			})
 		})
 	})

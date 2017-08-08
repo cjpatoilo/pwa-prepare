@@ -63,7 +63,8 @@
 		"eslint": "^3.12.1",
 		"eslint-config-styled": "^0.0.0",
 		"husky": "^0.12.0",
-		"nyc": "^10.0.0"
+		"nyc": "^10.0.0",
+		"uglify-js": "^3.0.27"
 	},
 	"engines": {
 		"node": ">=4"
