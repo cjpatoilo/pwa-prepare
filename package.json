@@ -1,7 +1,7 @@
 {
 	"name": "pwa-prepare",
-	"version": "0.0.0",
-	"description": "Generate bundles from npm dependencies.",
+	"version": "0.0.1",
+	"description": "Prepare your application for PWA features.",
 	"homepage": "http://cjpatoilo.com/pwa-prepare",
 	"repository": "cjpatoilo/pwa-prepare",
 	"license": "MIT",
