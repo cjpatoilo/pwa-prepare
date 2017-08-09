@@ -28,17 +28,19 @@ function pwaPrepare (argv) {
 			precache.write(
 				swFile,
 				configPrecache,
-				() => fs.writeFileSync(swFile, uglifyjs.minify(swFile).code)
+				() => {
+					fs.writeFileSync(swFile, uglifyjs.minify(swFile).code)
+
+					grepFiles.map(html => {
+						fs.readFile(html, 'utf-8', (error, data) => {
+							if (error) throw error
+
+							data = data.replace('</body>', '<script src="service-worker.js"></script><script>if ("serviceWorker" in navigator && window.location.protocol === "https:") navigator.serviceWorker.register("/service-worker.js")</script></body>')
+							fs.writeFile(html, data, (error, data) => !error ? console.log(`${html} was saved!`) : console.error(error))
+						})
+					})
+				}
 			)
-
-			grepFiles.map(html => {
-				fs.readFile(html, 'utf-8', (error, data) => {
-					if (error) throw error
-
-					data = data.replace('</body>', '<script src="service-worker.js"></script><script>if ("serviceWorker" in navigator && window.location.protocol === "https:") navigator.serviceWorker.register("/service-worker.js")</script></body>')
-					fs.writeFile(html, data, (error, data) => !error ? console.log(`${html} was saved!`) : console.error(error))
-				})
-			})
 		})
 	})
 }
