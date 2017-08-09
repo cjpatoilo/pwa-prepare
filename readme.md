@@ -3,7 +3,7 @@
 > Prepare your application for PWA features
 
 [![Travis Status](https://travis-ci.org/cjpatoilo/pwa-prepare.svg?branch=master)](https://travis-ci.org/cjpatoilo/pwa-prepare?branch=master)
-[![AppVeyor Status](https://ci.appveyor.com/api/projects/status/f2wohr17082b50ib?svg=true)](https://ci.appveyor.com/project/cjpatoilo/pwa-prepare)
+[![AppVeyor Status](https://ci.appveyor.com/api/projects/status/tpjjmha9bs60ndq8?svg=true)](https://ci.appveyor.com/project/cjpatoilo/pwa-prepare)
 [![Codacy Status](https://img.shields.io/codacy/grade/99f45f0e32c649e79db8ba48c66b468f/master.svg)](https://www.codacy.com/app/cjpatoilo/pwa-prepare/dashboard)
 [![Dependencies Status](https://david-dm.org/cjpatoilo/pwa-prepare.svg)](https://david-dm.org/cjpatoilo/pwa-prepare)
 [![Version Status](https://badge.fury.io/js/pwa-prepare.svg)](https://www.npmjs.com/package/pwa-prepare)
