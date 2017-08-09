@@ -35,7 +35,7 @@ function pwaPrepare (argv) {
 				fs.readFile(html, 'utf-8', (error, data) => {
 					if (error) throw error
 
-					data = data.replace('</body>', `<script defer async src="service-worker.js"><script>if ('serviceWorker' in navigator && window.location.protocol === 'https:') navigator.serviceWorker.register('/service-worker.js')</script></body>`)
+					data = data.replace('</body>', '<script src="service-worker.js"></script><script>if ("serviceWorker" in navigator && window.location.protocol === "https:") navigator.serviceWorker.register("/service-worker.js")</script></body>')
 					fs.writeFile(html, data, (error, data) => !error ? console.log(`${html} was saved!`) : console.error(error))
 				})
 			})
