@@ -3,7 +3,6 @@ const fs = require('fs')
 const glob = require('glob')
 const NodeVersionAssets = require('node-version-assets')
 const precache = require('sw-precache')
-const uglifyjs = require('uglify-js')
 
 function pwaPrepare (argv) {
 	const output = argv[0] || 'dist'
@@ -30,15 +29,10 @@ function pwaPrepare (argv) {
 			})
 			nva.run()
 
-			const configPrecache = {
+			precache.write(swFile, {
 				staticFileGlobs: [`${output}/**/*.{html,js,css,png,jpg,jpeg,gif,svg,ico,eot,ttf,woff,woff2,txt,webapp,json}`],
 				stripPrefix: output
-			}
-			precache.write(
-				swFile,
-				configPrecache,
-				() => fs.writeFileSync(swFile, uglifyjs.minify(swFile).code)
-			)
+			})
 		})
 	})
 }
