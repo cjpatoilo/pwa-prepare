@@ -53,17 +53,16 @@
 	],
 	"dependencies": {
 		"glob": "^7.1.2",
-		"node-version-assets": "^1.2.0",
-		"sw-precache": "^5.2.0"
+		"node-version-assets": "^1.2.2",
+		"sw-precache": "^5.2.1"
 	},
 	"devDependencies": {
-		"ava": "^0.17.0",
+		"ava": "^0.25.0",
 		"editorconfig-tools": "^0.1.1",
-		"eslint": "^3.12.1",
-		"eslint-config-styled": "^0.0.0",
-		"husky": "^0.12.0",
-		"nyc": "^10.0.0",
-		"uglify-js": "^3.0.27"
+		"eslint": "^4.16.0",
+		"eslint-config-styled": "0.0.2",
+		"husky": "^0.14.3",
+		"nyc": "^11.4.1"
 	},
 	"engines": {
 		"node": ">=4"
