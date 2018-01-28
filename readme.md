@@ -11,7 +11,7 @@
 [![Gitter Chat](https://img.shields.io/badge/gitter-join_the_chat-4cc61e.svg)](https://gitter.im/cjpatoilo/pwa-prepare)
 
 
-## Why it's awesome?
+## Why it's awesome
 
 This library reads the files that will be published, adds hashes to the files, generates the cache of your files (service worker).
 
