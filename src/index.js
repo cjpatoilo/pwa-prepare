@@ -1,17 +1,19 @@
 'use strict'
 const fs = require('fs')
+const path = require('path')
 const glob = require('glob')
 const NodeVersionAssets = require('node-version-assets')
 const precache = require('sw-precache')
 
 function pwaPrepare (argv) {
-	const output = argv[0] || 'dist'
+	const output = path.dirname(argv[0]) || 'dist'
 	const swFile = `${output}/service-worker.js`
+	const htmlFile = path.extname(argv[0]) === '.html' ? path.basename(argv[0]) : '**/*.html'
 
 	glob(`${output}/**/*.{css,js}`, (error, assets) => {
 		if (error) throw error
 
-		glob(`${output}/**/*.html`, (error, grepFiles) => {
+		glob(`${output}/${htmlFile}`, (error, grepFiles) => {
 			if (error) throw error
 
 			grepFiles.map(htmlFile => {
