@@ -10,11 +10,9 @@
 [![Download Status](https://img.shields.io/npm/dt/pwa-prepare.svg)](https://www.npmjs.com/package/pwa-prepare)
 [![Gitter Chat](https://img.shields.io/badge/gitter-join_the_chat-4cc61e.svg)](https://gitter.im/cjpatoilo/pwa-prepare)
 
-
 ## Why it's awesome
 
 This library reads the files that will be published, adds hashes to the files, generates the cache of your files (service worker).
-
 
 ## Getting Started
 
@@ -24,14 +22,13 @@ This library reads the files that will be published, adds hashes to the files, g
 $ npm install -g pwa-prepare
 ```
 
-*NOTE: Install this npm package with `-g` to global use or with `-D` to add the package as a devDependency in the `package.json` file of your project.*
+_NOTE: Install this npm package with `-g` to global use or with `-D` to add the package as a devDependency in the `package.json` file of your project._
 
 **Install with Yarn**
 
 ```
 $ yarn add pwa-prepare
 ```
-
 
 **Usage**
 
@@ -40,7 +37,6 @@ $ pwa-prepare dist
 ```
 
 NOTE: `dist` is output by default when output is undefined
-
 
 ## CLI
 
@@ -62,12 +58,10 @@ $ pwa-prepare --help
     $ pwa-prepare dist
 ```
 
-
 ## Contributing
 
-Want to contribute? Follow these [recommendations](https://github.com/cjpatoilo/pwa-prepare/blob/master/.github/contributing.md).
-
+Want to contribute? Follow these [recommendations](https://github.com/cjpatoilo/pwa-prepare/contribute).
 
 ## License
 
-Designed with ♥ by [CJ Patoilo](https://twitter.com/cjpatoilo). Licensed under the [MIT License](http://cjpatoilo.mit-license.org).
+Designed with ♥ by [CJ Patoilo](https://twitter.com/cjpatoilo). Licensed under the [MIT License](https://cjpatoilo.com/license).
